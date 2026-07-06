@@ -1,7 +1,9 @@
 declare function parseInt(value: unknown): number;
 
-export const CC_TELEGRAM_API_ID = parseInt(process.env.CC_TELEGRAM_API_ID) || 31861455;
-export const CC_TELEGRAM_API_HASH = process.env.CC_TELEGRAM_API_HASH || "ca60446c67ce250ee4e789c730163449";
+// ФОРК-ПРАВКА (см. README-FORK.md): дефолтные чужие креды апстрима удалены —
+// задай свои с https://my.telegram.org в .env.
+export const CC_TELEGRAM_API_ID = parseInt(process.env.CC_TELEGRAM_API_ID) || 0;
+export const CC_TELEGRAM_API_HASH = process.env.CC_TELEGRAM_API_HASH || "";
 
 export const CC_REDIS_HOST = process.env.CC_REDIS_HOST || "127.0.0.1";
 export const CC_REDIS_PORT = parseInt(process.env.CC_REDIS_PORT) || 6379;
