@@ -13,10 +13,10 @@
 
 ## Отличия от upstream
 
-1. **Чужие Telegram-креды удалены** (`packages/{core,main}/src/config/params.ts`):
-   `CC_TELEGRAM_API_ID`/`CC_TELEGRAM_API_HASH` обязательны в `.env`
-   (https://my.telegram.org, отдельный аккаунт); `getTelegram()` бросает понятную
-   ошибку, если не заданы.
+1. ~~Чужие Telegram-креды удалены~~ **ОТКАЧЕНО 2026-07-08** (решение владельца:
+   Telegram-сторону ведёт автор — работаем на его app-кредах). `params.ts` обоих
+   пакетов и `getTelegram()` возвращены к апстриму: дефолтные креды автора
+   (api_id 31861455) — fallback, env-переменные — опциональный override.
 2. **Redis-пароль из окружения** (`docker/redis/docker-compose.yaml`).
 
 ## Что помнить (из разбора fork-map)
